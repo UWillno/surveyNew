@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zr.survey.mapper.SurveyRecordMapper">
+
+    <resultMap id="BaseResultMap" type="cn.zr.survey.entity.SurveyRecord">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="itemId" column="item_id" jdbcType="INTEGER"/>
+            <result property="totalScore" column="total_score" jdbcType="INTEGER"/>
+            <result property="optionsId" column="options_id" jdbcType="INTEGER"/>
+            <result property="optionsScore" column="options_score" jdbcType="INTEGER"/>
+            <result property="isOk" column="is_ok" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="DATE"/>
+            <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+            <result property="version" column="version" jdbcType="INTEGER"/>
+            <result property="studentId" column="student_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,item_id,total_score,
+        options_id,options_score,is_ok,
+        create_time,is_delete,version,
+        student_id
+    </sql>
+</mapper>

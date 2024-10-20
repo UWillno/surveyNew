@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zr.survey.mapper.ItemOptionsMapper">
+
+    <resultMap id="BaseResultMap" type="cn.zr.survey.entity.ItemOptions">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="context" column="context" jdbcType="VARCHAR"/>
+            <result property="score" column="score" jdbcType="INTEGER"/>
+            <result property="itemId" column="item_id" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="DATE"/>
+            <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+            <result property="version" column="version" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,context,score,
+        item_id,create_time,is_delete,
+        version
+    </sql>
+</mapper>

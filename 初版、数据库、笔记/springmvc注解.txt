@@ -1,0 +1,28 @@
+@Controller
+       作用在类上, 标志这个类为控制器类, 将类交给spring管理	
+@RestController
+       同上, 并且指定类上的所有方法返回值都经过消息转换器, (等价于每个每个方法上都加了ResponseBody)
+@RequestMapping
+      作用在方法上, value值指定该方法的映射地址, 将该方法标志位处理器, 映射地址为键,处理为值,放到处理器映射器中	
+@GetMapping
+      同上, 并且指定只有get请求才能访问	
+@PostMapping
+
+@ResponseBody
+      作用在方法上, 指定该方法的返回值经过消息转换器, 转为json或者text/html等	
+@RequestBody
+     作用在方法参数上, 接口访问该方法是传递的json字符串,并且封装到后面的对象中	
+@PathVariable
+     作用在方法参数上,接口url地址上的{}占位符的值
+@SessionAttributes
+     作用在类上的, 指定model中的某个键值对复制一份放到session中	
+@SessionAttribute
+      作用在方法参数上, 从session取出某个值,赋值给后面的变量中
+@RequestParams
+      作用在方法的参数上, 指定该参数接收的传过来的值的键,可以设置参数的默认值
+      当方法参数是map集合的时候, 将传递的所有数据都直接封装到map集合中    
+@ExceptionHandler
+      作用在方法在, 指定该方法为异常处理器,只要当前的controller中发生异常, 都会运行这个异常处理器
+@ModelAttribute
+	1) 作用在方法上的时候或者作用在方法返回值类型的前面, 会以注解中的value的值作为键, 以方法的返回结果作为值放到model中
+	2)作用在方法参数里面的时候, 会从model中取出注解value值为键的值,然后复制给后面的形参
